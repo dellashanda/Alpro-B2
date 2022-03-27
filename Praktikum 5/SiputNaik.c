@@ -1,0 +1,4 @@
+/*Nama File     : SiputNaik.c*//*Deskripsi     : Menghitung jumlah hari siput naik pada N meter lubang*//*Nama-Nim      : Della Shanda Anggrivani - 24060121120024*/
+/*Tgl Pembuatan : Sabtu, 26-03-2022*/
+#include<stdio.h>
+int main(){	/*Kamus*/	float N;	float j;	int i;	/*Algoritma*/	printf("Program Menghitung Hari Siput Naik \n");	printf("Masukan kedalaman lubang N dalam meter = ");	scanf("%f", &N);	if (N<=0){		printf("Masukan harus positif");	}	else{		j=0;		i=1;		do{			if(j+0.3>=N-0.01){ /*berhasil sampai N selama sehari*/				printf("%f", j);				j=N;				printf("Siput membutuhkan %d hari untuk naik dari lubang", i);			}			else{ /*Kondisi Naik selama sehari semalam*/				j=j+0.2;			}		i++;		}while(j<N);	}return 0;}
